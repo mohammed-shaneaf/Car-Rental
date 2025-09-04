@@ -18,7 +18,7 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case AppName.signin:
       return MaterialPageRoute(builder: (_) => const SignInView());
 
-      case AppName.signup:
+    case AppName.signup:
       return MaterialPageRoute(builder: (_) => const SignUpView());
 
     case AppName.forgetpasswordview:
