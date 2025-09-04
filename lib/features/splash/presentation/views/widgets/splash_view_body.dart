@@ -1,5 +1,5 @@
 import 'package:car_rental/features/splash/data/splash_contrlloer.dart';
-import 'package:car_rental/shared/widgets/app_logo.dart';
+import 'package:car_rental/shared/widgets/app_logo_with_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -37,7 +37,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
             crossAxisAlignment:
                 CrossAxisAlignment.center, // horizontal centering
             children: [
-              AppLogo(),
+              AppLogoWithName(),
             ],
           ),
         ),
