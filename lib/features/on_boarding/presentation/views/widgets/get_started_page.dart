@@ -1,3 +1,4 @@
+import 'package:car_rental/app/app_name.dart';
 import 'package:car_rental/core/utils/assets.dart';
 import 'package:car_rental/shared/widgets/build_logo.dart';
 import 'package:car_rental/shared/widgets/custom_primary_button.dart';
@@ -54,8 +55,11 @@ class ExperiencePage extends StatelessWidget {
             const Spacer(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-              child:
-                  CustomPrimaryButton(label: 'Get Started', onPressed: () {}),
+              child: CustomPrimaryButton(
+                  label: 'Get Started',
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppName.signin);
+                  }),
             ),
           ],
         ),
