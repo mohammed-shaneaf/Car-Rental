@@ -2,6 +2,7 @@ import 'package:car_rental/app/app_name.dart';
 import 'package:car_rental/features/auth/presentation/views/forget_password_view.dart';
 import 'package:car_rental/features/auth/presentation/views/sign_in_view.dart';
 import 'package:car_rental/features/auth/presentation/views/sign_up_view.dart';
+import 'package:car_rental/features/auth/presentation/views/verify_account_view.dart';
 import 'package:car_rental/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:car_rental/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,9 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
 
     case AppName.forgetpasswordview:
       return MaterialPageRoute(builder: (_) => const ForgetPasswordView());
+
+    case AppName.verifyaccount:
+      return MaterialPageRoute(builder: (_) => const VerifyAccountView());
     // case '/car_form':
     //   return MaterialPageRoute(
     //       builder: (_) => CarFormScreen(car: args?['car']));

@@ -46,6 +46,7 @@ class SignInViewBody extends StatelessWidget {
             CustomPrimaryButton(label: 'Sign In', onPressed: () {}),
             20.verticalSpace,
             CustomSecondryButton(
+              isDisabled: true,
               label: 'Sign Up',
               onPressed: () {
                 Navigator.pushNamed(context, AppName.signup);

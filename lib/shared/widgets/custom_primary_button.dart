@@ -36,7 +36,7 @@ class CustomPrimaryButton extends StatelessWidget {
             ? AppColors.grayColor
             : (backgroundColor ?? AppColors.primaryColor),
         shape:
-            RoundedRectangleBorder(borderRadius: radius ?? AppSpacing.radius16),
+            RoundedRectangleBorder(borderRadius: radius ?? AppSpacing.radius24),
         elevation: 2,
         minimumSize: Size(0, height), // allow width to be constrained outside
         tapTargetSize: MaterialTapTargetSize.padded,

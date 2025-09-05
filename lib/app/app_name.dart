@@ -4,4 +4,6 @@ class AppName {
   static const String signin = '/signin';
   static const String signup = '/signup';
   static const String forgetpasswordview = '/forgetpasswordview';
+  static const String home = '/home';
+  static const String verifyaccount = '/verifyaccount';
 }

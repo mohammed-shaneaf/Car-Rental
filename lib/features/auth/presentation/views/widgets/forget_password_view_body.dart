@@ -37,7 +37,11 @@ class ForgetPasswordViewBody extends StatelessWidget {
             'Enter the email address associated with your account and we will send you a link to reset your password.',
           ),
           40.verticalSpace,
-          CustomPrimaryButton(label: 'Continue', onPressed: () {}),
+          CustomPrimaryButton(
+              label: 'Continue',
+              onPressed: () {
+                Navigator.pushNamed(context, AppName.verifyaccount);
+              }),
           30.verticalSpace,
           GestureDetector(
             onTap: () {
@@ -55,7 +59,7 @@ class ForgetPasswordViewBody extends StatelessWidget {
             },
             child: Text.rich(TextSpan(
               text: 'Create ',
-              style: AppTextStyle.f20meduim,
+              style: AppTextStyle.f16normal,
               children: [
                 TextSpan(
                   text: 'New Account',
