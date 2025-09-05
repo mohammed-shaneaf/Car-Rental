@@ -6,4 +6,5 @@ class AppName {
   static const String forgetpasswordview = '/forgetpasswordview';
   static const String home = '/home';
   static const String verifyaccount = '/verifyaccount';
+  static const String enterotpview = '/enterotpview';
 }

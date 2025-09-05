@@ -1,4 +1,5 @@
 import 'package:car_rental/app/app_name.dart';
+import 'package:car_rental/features/auth/presentation/views/enter_otp_view.dart';
 import 'package:car_rental/features/auth/presentation/views/forget_password_view.dart';
 import 'package:car_rental/features/auth/presentation/views/sign_in_view.dart';
 import 'package:car_rental/features/auth/presentation/views/sign_up_view.dart';
@@ -27,6 +28,9 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
 
     case AppName.verifyaccount:
       return MaterialPageRoute(builder: (_) => const VerifyAccountView());
+
+    case AppName.enterotpview:
+      return MaterialPageRoute(builder: (_) => const EnterOtpView());
     // case '/car_form':
     //   return MaterialPageRoute(
     //       builder: (_) => CarFormScreen(car: args?['car']));

@@ -1,3 +1,4 @@
+import 'package:car_rental/app/app_name.dart';
 import 'package:car_rental/core/utils/app_spacing.dart';
 import 'package:car_rental/core/utils/assets.dart';
 import 'package:car_rental/features/auth/presentation/views/widgets/country_and_phone_text_field.dart';
@@ -41,7 +42,11 @@ class VerifyAccountViewBody extends StatelessWidget {
           CountryAndPhoneTextField(phoneController: phoneController),
 
           30.verticalSpace,
-          CustomPrimaryButton(label: 'Continue', onPressed: () {}),
+          CustomPrimaryButton(
+              label: 'Continue',
+              onPressed: () {
+                Navigator.pushNamed(context, AppName.enterotpview);
+              }),
         ],
       ),
     );
