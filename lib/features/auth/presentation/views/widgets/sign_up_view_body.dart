@@ -1,9 +1,10 @@
+import 'package:car_rental/app/app_name.dart';
 import 'package:car_rental/core/styles/app_text_style.dart';
+import 'package:car_rental/core/themes/app_colors.dart';
 import 'package:car_rental/core/utils/app_spacing.dart';
 import 'package:car_rental/core/utils/assets.dart';
 import 'package:car_rental/shared/widgets/custom_password_field.dart';
 import 'package:car_rental/shared/widgets/custom_primary_button.dart';
-import 'package:car_rental/shared/widgets/custom_secondry_button.dart';
 import 'package:car_rental/shared/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -45,8 +46,25 @@ class SignUpViewBody extends StatelessWidget {
             30.verticalSpace,
             CustomPrimaryButton(label: 'Sign Up', onPressed: () {}),
             20.verticalSpace,
-            CustomSecondryButton(
-                label: 'Sign In', onPressed: () {}, maxWidth: 0.5),
+            // CustomSecondryButton(
+            //     label: 'Sign In', onPressed: () {}, maxWidth: 0.5),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, AppName.signin);
+              },
+              child: Text.rich(TextSpan(
+                text: 'Already have an account ',
+                style: AppTextStyle.f16normal,
+                children: [
+                  TextSpan(
+                    text: 'Sign in',
+                    style: AppTextStyle.f20meduim.copyWith(
+                      color: AppColors.primaryColor,
+                    ),
+                  ),
+                ],
+              )),
+            ),
           ],
         ),
       ),

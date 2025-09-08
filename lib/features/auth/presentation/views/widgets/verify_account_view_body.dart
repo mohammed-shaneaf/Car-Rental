@@ -14,40 +14,42 @@ class VerifyAccountViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final phoneController = TextEditingController();
 
-    return Padding(
-      padding: AppSpacing.pagePadding,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          20.verticalSpace,
-          Row(
-            children: [
-              SvgPicture.asset(Assets.assetsImagesLogoSvg),
-            ],
-          ),
-          100.verticalSpace,
-          const Text(
-            'Verify your phone number',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: AppSpacing.pagePadding,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            20.verticalSpace,
+            Row(
+              children: [
+                SvgPicture.asset(Assets.assetsImagesLogoSvg),
+              ],
             ),
-          ),
-          20.verticalSpace,
-          const Text('We have sent you an SMS with a code to number'),
-          30.verticalSpace,
+            100.verticalSpace,
+            const Text(
+              'Verify your phone number',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+            20.verticalSpace,
+            const Text('We have sent you an SMS with a code to number'),
+            30.verticalSpace,
 
-          /// ✅ Phone Input Field
-          CountryAndPhoneTextField(phoneController: phoneController),
+            /// ✅ Phone Input Field
+            CountryAndPhoneTextField(phoneController: phoneController),
 
-          30.verticalSpace,
-          CustomPrimaryButton(
-              label: 'Continue',
-              onPressed: () {
-                Navigator.pushNamed(context, AppName.enterotpview);
-              }),
-        ],
+            30.verticalSpace,
+            CustomPrimaryButton(
+                label: 'Continue',
+                onPressed: () {
+                  Navigator.pushNamed(context, AppName.enterotpview);
+                }),
+          ],
+        ),
       ),
     );
   }

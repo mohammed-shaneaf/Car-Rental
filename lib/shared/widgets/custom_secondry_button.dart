@@ -51,7 +51,7 @@ class CustomSecondryButton extends StatelessWidget {
         minimumSize: Size(0, height),
         tapTargetSize: MaterialTapTargetSize.padded,
       ),
-      onPressed: isDisabled ? null : onPressed,
+      onPressed: onPressed,
       child: Text(
         label,
         textAlign: TextAlign.center,

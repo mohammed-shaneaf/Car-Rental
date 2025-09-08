@@ -1,5 +1,6 @@
 import 'package:car_rental/app/app_name.dart';
 import 'package:car_rental/core/styles/app_text_style.dart';
+import 'package:car_rental/core/themes/app_colors.dart';
 import 'package:car_rental/core/utils/app_spacing.dart';
 import 'package:car_rental/core/utils/assets.dart';
 import 'package:car_rental/features/auth/presentation/views/widgets/remember_me_and_froget_password.dart';
@@ -46,12 +47,30 @@ class SignInViewBody extends StatelessWidget {
             CustomPrimaryButton(label: 'Sign In', onPressed: () {}),
             20.verticalSpace,
             CustomSecondryButton(
-              isDisabled: true,
+              // isDisabled: true,
               label: 'Sign Up',
               onPressed: () {
                 Navigator.pushNamed(context, AppName.signup);
               },
               // isDisabled: true,
+            ),
+            // const Spacer(),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, AppName.signup);
+              },
+              child: Text.rich(TextSpan(
+                text: 'Do not have an account ',
+                style: AppTextStyle.f16normal,
+                children: [
+                  TextSpan(
+                    text: 'Sign up',
+                    style: AppTextStyle.f20meduim.copyWith(
+                      color: AppColors.primaryColor,
+                    ),
+                  ),
+                ],
+              )),
             ),
           ],
         ),

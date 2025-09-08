@@ -8,31 +8,50 @@ environment:
   sdk: '>=3.1.5 <4.0.0'
 
 dependencies:
-  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  flutter_screenutil: ^5.9.3
-  flutter_svg: ^2.0.10+1
-  phone_text_field: ^2.0.0
-  pinput: ^5.0.2
+
+  # State Management
+  flutter_bloc: ^9.1.1          # BLoC (Business Logic Component) for predictable, testable state management
+
+  # Responsive UI & Icons
+  flutter_screenutil: ^5.9.3    # Helps with responsive UI design across different screen sizes
+  cupertino_icons: ^1.0.2       # iOS-style icons
+  flutter_svg: ^2.0.10+1        # Render SVG images in Flutter apps
+
+  # Code Generation & Data Classes
+  freezed: ^3.2.0               # Immutable data classes & unions (sealed classes)
+  freezed_annotation: ^3.1.0    # Annotations for freezed (must be used with build_runner)
+  json_annotation: ^4.9.0       # JSON serialization annotations
+  json_serializable: ^6.11.1    # Code generator for model serialization
+  build_runner: ^2.8.0          # Core build system for generating code (freezed, retrofit, json)
+
+  # API & Networking
+  dio: ^5.9.0                   # HTTP client for API calls
+  retrofit: ^4.7.2              # Type-safe HTTP client generator (works with Dio)
+  retrofit_generator: ^10.0.4   # Code generator for Retrofit (requires build_runner)
+  pretty_dio_logger: ^1.4.0     # Logs network requests/responses in a readable format
+
+  # Dependency Injection
+  get_it: ^8.2.0                # Service locator for dependency injection
+
+  # UI Widgets & Input
+  phone_text_field: ^2.0.0      # Ready-to-use phone number input with validation
+  pinput: ^5.0.2                # Customizable PIN input widget (for OTP screens)
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
   flutter_test:
-    sdk: flutter
+    sdk: flutter                # Testing framework for unit/widget/integration tests
+  flutter_lints: ^2.0.0         # Recommended linting rules for clean & consistent code
 
 flutter:
   uses-material-design: true
 
-  # Register asset directories (add/remove as your project needs).
+  # Register asset directories (images, etc.)
   assets:
     - assets/images/
-    - assets/icons/
-    - assets/svg/
-    - assets/lottie/
-    - assets/json/
 
-  # Tajawal font family (weights mapped correctly)
+  # Tajawal font family (Arabic-friendly font with multiple weights)
   fonts:
     - family: Tajawal
       fonts:
@@ -49,9 +68,9 @@ flutter:
         - asset: assets/fonts/Tajawal-Black.ttf
           weight: 900
 
-# VS Code “Flutter Assets” extension config (TOP-LEVEL, not under `flutter`)
+# VS Code “Flutter Assets” extension config
 flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/utils
   filename: assets.dart
-  # field_prefix: ''     # optional; uncomment to customize field names
+  # field_prefix: ''   # optional; uncomment to customize field names
