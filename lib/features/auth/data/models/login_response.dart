@@ -6,8 +6,8 @@ part 'login_response.freezed.dart';
 @freezed
 class LoginResponse with _$LoginResponse {
   const factory LoginResponse({
-    required String accessToken,
-    required String refreshToken,
+    required String access,
+    required String refresh,
   }) = _LoginResponse;
 
   factory LoginResponse.fromJson(Map<String, dynamic> json) =>

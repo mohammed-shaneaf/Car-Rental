@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_response.dart';
+part of 'sign_up_response.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,34 +14,34 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) {
-  return _LoginResponse.fromJson(json);
+SignupResponse _$SignupResponseFromJson(Map<String, dynamic> json) {
+  return _SignupResponse.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LoginResponse {
+mixin _$SignupResponse {
   String get access => throw _privateConstructorUsedError;
   String get refresh => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LoginResponseCopyWith<LoginResponse> get copyWith =>
+  $SignupResponseCopyWith<SignupResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginResponseCopyWith<$Res> {
-  factory $LoginResponseCopyWith(
-          LoginResponse value, $Res Function(LoginResponse) then) =
-      _$LoginResponseCopyWithImpl<$Res, LoginResponse>;
+abstract class $SignupResponseCopyWith<$Res> {
+  factory $SignupResponseCopyWith(
+          SignupResponse value, $Res Function(SignupResponse) then) =
+      _$SignupResponseCopyWithImpl<$Res, SignupResponse>;
   @useResult
   $Res call({String access, String refresh});
 }
 
 /// @nodoc
-class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse>
-    implements $LoginResponseCopyWith<$Res> {
-  _$LoginResponseCopyWithImpl(this._value, this._then);
+class _$SignupResponseCopyWithImpl<$Res, $Val extends SignupResponse>
+    implements $SignupResponseCopyWith<$Res> {
+  _$SignupResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -68,22 +68,22 @@ class _$LoginResponseCopyWithImpl<$Res, $Val extends LoginResponse>
 }
 
 /// @nodoc
-abstract class _$$LoginResponseImplCopyWith<$Res>
-    implements $LoginResponseCopyWith<$Res> {
-  factory _$$LoginResponseImplCopyWith(
-          _$LoginResponseImpl value, $Res Function(_$LoginResponseImpl) then) =
-      __$$LoginResponseImplCopyWithImpl<$Res>;
+abstract class _$$SignupResponseImplCopyWith<$Res>
+    implements $SignupResponseCopyWith<$Res> {
+  factory _$$SignupResponseImplCopyWith(_$SignupResponseImpl value,
+          $Res Function(_$SignupResponseImpl) then) =
+      __$$SignupResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String access, String refresh});
 }
 
 /// @nodoc
-class __$$LoginResponseImplCopyWithImpl<$Res>
-    extends _$LoginResponseCopyWithImpl<$Res, _$LoginResponseImpl>
-    implements _$$LoginResponseImplCopyWith<$Res> {
-  __$$LoginResponseImplCopyWithImpl(
-      _$LoginResponseImpl _value, $Res Function(_$LoginResponseImpl) _then)
+class __$$SignupResponseImplCopyWithImpl<$Res>
+    extends _$SignupResponseCopyWithImpl<$Res, _$SignupResponseImpl>
+    implements _$$SignupResponseImplCopyWith<$Res> {
+  __$$SignupResponseImplCopyWithImpl(
+      _$SignupResponseImpl _value, $Res Function(_$SignupResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$LoginResponseImplCopyWithImpl<$Res>
     Object? access = null,
     Object? refresh = null,
   }) {
-    return _then(_$LoginResponseImpl(
+    return _then(_$SignupResponseImpl(
       access: null == access
           ? _value.access
           : access // ignore: cast_nullable_to_non_nullable
@@ -107,11 +107,11 @@ class __$$LoginResponseImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$LoginResponseImpl implements _LoginResponse {
-  const _$LoginResponseImpl({required this.access, required this.refresh});
+class _$SignupResponseImpl implements _SignupResponse {
+  const _$SignupResponseImpl({required this.access, required this.refresh});
 
-  factory _$LoginResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LoginResponseImplFromJson(json);
+  factory _$SignupResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SignupResponseImplFromJson(json);
 
   @override
   final String access;
@@ -120,14 +120,14 @@ class _$LoginResponseImpl implements _LoginResponse {
 
   @override
   String toString() {
-    return 'LoginResponse(access: $access, refresh: $refresh)';
+    return 'SignupResponse(access: $access, refresh: $refresh)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoginResponseImpl &&
+            other is _$SignupResponseImpl &&
             (identical(other.access, access) || other.access == access) &&
             (identical(other.refresh, refresh) || other.refresh == refresh));
   }
@@ -139,24 +139,25 @@ class _$LoginResponseImpl implements _LoginResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith =>
-      __$$LoginResponseImplCopyWithImpl<_$LoginResponseImpl>(this, _$identity);
+  _$$SignupResponseImplCopyWith<_$SignupResponseImpl> get copyWith =>
+      __$$SignupResponseImplCopyWithImpl<_$SignupResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LoginResponseImplToJson(
+    return _$$SignupResponseImplToJson(
       this,
     );
   }
 }
 
-abstract class _LoginResponse implements LoginResponse {
-  const factory _LoginResponse(
+abstract class _SignupResponse implements SignupResponse {
+  const factory _SignupResponse(
       {required final String access,
-      required final String refresh}) = _$LoginResponseImpl;
+      required final String refresh}) = _$SignupResponseImpl;
 
-  factory _LoginResponse.fromJson(Map<String, dynamic> json) =
-      _$LoginResponseImpl.fromJson;
+  factory _SignupResponse.fromJson(Map<String, dynamic> json) =
+      _$SignupResponseImpl.fromJson;
 
   @override
   String get access;
@@ -164,6 +165,6 @@ abstract class _LoginResponse implements LoginResponse {
   String get refresh;
   @override
   @JsonKey(ignore: true)
-  _$$LoginResponseImplCopyWith<_$LoginResponseImpl> get copyWith =>
+  _$$SignupResponseImplCopyWith<_$SignupResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

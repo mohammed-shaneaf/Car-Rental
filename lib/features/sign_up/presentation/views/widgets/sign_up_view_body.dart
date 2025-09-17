@@ -42,7 +42,7 @@ class SignUpViewBody extends StatelessWidget {
                 passwordController: TextEditingController()),
             20.verticalSpace,
             const CustomTextFormField(
-                hintText: 'Phone Number', textInputType: TextInputType.phone),
+                hintText: 'Country', textInputType: TextInputType.text),
             30.verticalSpace,
             CustomPrimaryButton(label: 'Sign Up', onPressed: () {}),
             20.verticalSpace,
